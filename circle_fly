@@ -11,6 +11,9 @@ client.takeoff();
 while (i < 100) {
 	client.clockwise(0.25);
     client.forward(0.25);
-    client.left(0.10);
+    client.right(0.10);
     i += 1;
 }
+client.stop();
+client.land();
+
