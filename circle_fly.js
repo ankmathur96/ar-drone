@@ -8,12 +8,14 @@ var i = 0;
 
 client.takeoff();
 
-while (i < 100) {
-	client.clockwise(0.25);
-    client.forward(0.25);
-    client.right(0.10);
-    i += 1;
-}
-client.stop();
-client.land();
+client
+	.after(1000, function() {
+    	client.forward(0.25);
+    	client.right(0.10);
+	})
+
+	.after(1000, function(){
+		client.stop();
+		client.land();
+	})
 
